@@ -1,0 +1,11 @@
+[project]
+name = "financial-company-analysis"
+version = "0.1.0"
+description = "Extract key financial figures from SEC EDGAR, build statistical predictive models, and identify key metrics."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    # sec-edgar-api 1.1.0 calls Limiter(raise_when_fail=...), which was removed in pyrate-limiter 4.x.
+    "pyrate-limiter>=3,<4",
+    "sec-edgar-api>=1.1.0",
+]
